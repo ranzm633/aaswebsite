@@ -122,9 +122,11 @@ add_action( 'widgets_init', 'aasolutions_widgets_init' );
 function aasolutions_scripts() {
 	wp_enqueue_style( 'aasolutions-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'aasolutions-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_style( 'aasolutions-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' );
 
-	wp_enqueue_script( 'aasolutions-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'aasolutions-navigation', get_template_directory_uri() . '/js/navigation.js', array(), true );
+
+	wp_enqueue_script( 'aasolutions-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -132,6 +134,22 @@ function aasolutions_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'aasolutions_scripts' );
 
+function wpb_add_bs4() {
+	wp_register_script('add_bs4_script', plugins_url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js', __FILE__), array('jquery'), true);
+	wp_enqueue_script('add_bs4_script');
+}
+  
+add_action( 'wp_enqueue_scripts', 'wpb_add_bs4' );  
+
+function prefix_modify_nav_menu_args( $args ) {
+	return array_merge( $args, array(
+		'walker' => WP_Bootstrap_Navwalker(),
+	) );
+}
+add_filter( 'wp_nav_menu_args', 'prefix_modify_nav_menu_args' );
+
+
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 /**
  * Implement the Custom Header feature.
  */

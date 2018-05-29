@@ -22,15 +22,15 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<?php
-    //     wp_nav_menu( array(
-    //     		'menu'				=> 'Menu 1',
-    //             'theme_location'    => 'Primary',
-    //             'container'         => '',
-    //             'menu_class'        => 'top-navbar',
-    //             'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-	//             'walker'            => new WP_Bootstrap_Navwalker(),
-    //         )
-    //     );
+         wp_nav_menu( array(
+         		'menu'				=> 'Menu 1',
+                 'theme_location'    => 'Primary',
+                 'container'         => '',
+                 'menu_class'        => 'top-navbar',
+                 'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+	             'walker'            => new WP_Bootstrap_Navwalker(),
+             )
+         );
     ?>
 <header class="banner">
     <div class="container">
