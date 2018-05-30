@@ -22,19 +22,19 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Logo diri</a>
+  <div class="navbar-brand"><?php the_custom_logo(); ?></div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <?php
          wp_nav_menu( array(
-         		'menu'				=> 'Menu 1',
+         		     'menu'				       => 'Menu 1',
                  'theme_location'    => 'Primary',
                  'container'         => '',
                  'menu_class'        => 'top-navbar',
                  'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-	             'walker'            => new WP_Bootstrap_Navwalker(),
+	               'walker'            =>  new WP_Bootstrap_Navwalker(),
              )
          );
     ?>
@@ -42,35 +42,13 @@
 </nav>
 	
 <header class="banner">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-                  <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                  <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 </ol>
                 <div class="carousel-inner">
-                  <div class="carousel-item">
-                    <img class="first-slide" src="<?php echo get_theme_file_uri('images/banner-01.jpg'); ?>" alt="First slide">
-                    <div class="container">
-                      <div class="carousel-caption text-left">
-                        <h1>Example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item">
-                    <img class="second-slide" src="<?php echo get_theme_file_uri('images/banner-02.jpg'); ?>" alt="Second slide">
-                    <div class="container">
-                      <div class="carousel-caption">
-                        <h1>Another example headline.</h1>
-                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                      </div>
-                    </div>
-                  </div>
                   <div class="carousel-item active">
                     <img class="third-slide" src="<?php echo get_theme_file_uri('images/banner-03.jpg'); ?>" alt="Third slide">
                     <div class="container">
