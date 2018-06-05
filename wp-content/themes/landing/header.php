@@ -29,15 +29,50 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <?php
          wp_nav_menu( array(
-         		'menu'				=> 'Menu 1',
+         		     'menu'				       => 'Menu 1',
                  'theme_location'    => 'Primary',
                  'container'         => '',
                  'menu_class'        => 'top-navbar',
                  'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-	             'walker'            => new WP_Bootstrap_Navwalker(),
+	               'walker'            =>  new WP_Bootstrap_Navwalker(),
              )
          );
     ?>
   </div>
 </nav>
+<<<<<<< HEAD
+=======
+	
+<header class="banner">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="third-slide" src="<?php echo get_theme_file_uri('images/banner-03.jpg'); ?>" alt="Third slide">
+                    <div class="container">
+                      <div class="carousel-caption text-right">
+                        <h1>One more for good measure.</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+        </div>
+    </div>
+</header>
+>>>>>>> 6293f6b1d7f1c25dafbb44e7a047f684c966a0d8
 	<div id="content" class="site-content">
