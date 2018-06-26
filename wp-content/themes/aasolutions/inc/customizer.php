@@ -1,8 +1,8 @@
 <?php
 /**
- * AASolutions Theme Customizer
+ * aasolutions Theme Customizer
  *
- * @package AASolutions
+ * @package aasolutions
  */
 
 /**

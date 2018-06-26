@@ -6,25 +6,52 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package AASolutions
+ * @package aasolutions
  */
 
 ?>
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'aasolutions' ) ); ?>">
+<div class="cta-section">
+	<div class="container-fluid">
+		<div class="row pt-5 py-5">
+			<div class="col-lg col-md col-sm-12 text-right b-margin-y media-r">
+				<h1><?php echo get_option( 'cta_label', '' ); ?></h1>
+			</div>
+			<div class="col-lg col-md col-sm-12 text-center media-r">
+				<a class="btn cs-btn" href="<?php echo get_option( 'cta_link', '' ); ?>">Contact Us</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class="subfooter">
+		<div class="container">
+			
+				<div class="pt-5 pb-5 row">
+					<?php if ( is_active_sidebar( 'subfooter-1' ) ) : ?>
+			    		<?php dynamic_sidebar( 'subfooter-1' ); ?>
+					<?php endif; ?>
+					<?php if ( is_active_sidebar( 'subfooter-2' ) ) : ?>
+			    		<?php dynamic_sidebar( 'subfooter-2' ); ?>
+					<?php endif; ?>
+					<?php if ( is_active_sidebar( 'subfooter-3' ) ) : ?>
+			    		<?php dynamic_sidebar( 'subfooter-3' ); ?>
+					<?php endif; ?>
+					<?php if ( is_active_sidebar( 'subfooter-4' ) ) : ?>
+			    		<?php dynamic_sidebar( 'subfooter-4' ); ?>
+					<?php endif; ?>
+				</div>
+			
+		</div>
+	</div>
+
+	<footer id="colophon" class="site-footer text-white text-center">
+		<div class="site-info center pt-4 py-4">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'aasolutions' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'aasolutions' ), 'aasolutions', '<a href="http://underscores.me/">Underscores.me</a>' );
+				echo wpb_copyright();
+				printf( esc_html__( 'Active Apps Solutions. All Rights Reserved.', 'aasolutions' ), 'aasolutions');
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

@@ -1,0 +1,203 @@
+/*!
+ * Active Apps Solutions V1.0
+ * Copyright 2011-2018 AAS Team
+ */
+
+ /*---------- Top Nav Bar --------------*/
+
+ @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
+
+ p, a, h1, h2, h3, h4, h5, h6, footer {
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+ }
+
+.trans-dark {
+    background: rgba(10, 10, 10, 0.8);
+}
+
+.top-navbar a.nav-link {
+    color: #fff;
+    border-radius: 7px;
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+}
+
+.top-navbar a.dropdown-item {
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+}
+
+.top-navbar a.nav-link:focus, .top-navbar li.show a.nav-link {
+    background: rgba(50,50,50,0.5);
+    outline: none;
+}
+
+
+/*------- other CSS -----------*/
+
+.carousel-caption h1 {
+    font-family: Raleway, Helvetica, Arial, sans-serif;
+    font-weight: 800;
+}
+.carousel-caption {
+	bottom: 50%;
+}
+
+#site-navigation {
+	transition: all 0.3s ease-in-out;
+}
+
+#site-navigation img {
+	transition: all 0.3s ease-in-out;
+}
+
+.sticky-aasnav img {
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.8);
+}
+
+#site-navigation.sticky-aasnav {
+    margin-top: -10px;
+    padding-bottom: 0;
+}
+
+.h-center {
+    margin-left:auto;
+    margin-right: auto;
+    text-align:center;
+}
+
+/*--------- HERO Img ---------------*/
+
+.carousel-caption { bottom: 50% !important; }
+.hero.container-fluid {padding: 0 !important;}
+
+/*--------- CTA Section ------------*/
+
+.cta-section {
+    background: #282828;
+    color:#fff;
+}
+
+.cta-section h1, .cta-section h2, .cta-section h3, .cta-section h4, .cta-section h5, .cta-section h6, .cta-section p {
+    color:#fff;
+    margin-bottom: 0;
+}
+
+.cs-btn {
+    background: #105d98;
+    padding: 15px 30px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.cs-btn:hover {
+    color: #e0e0e0;
+}
+
+.b-margin-y {
+    margin: 5px 0;
+}
+
+/*-------- SERVICES ------------*/
+
+.service-thumb img {
+    height: 145px;
+    padding-bottom: 10px;
+    width: auto;
+}
+
+.img-placeholder {
+    vertical-align: bottom;
+    margin: 20px 10px;
+}
+
+.service-thumb a {
+    text-decoration: none;
+    color: #000;
+}
+/*-------- Subfooter / Footer --------*/
+
+.subfooter {
+    background-color: #1f95c1;
+}
+
+.subfooter a, .subfooter p, .subfooter {
+    color: #fff;
+}
+
+.subfooter li {
+    list-style: none;
+}
+
+.subfooter ul.sub-menu {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+footer {
+    background-color:#1382ac;
+}
+
+.subfooter h2 {
+    font-size: 21px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.sf-elem .textwidget {
+    padding-right: 20px;
+}
+
+.sf-elem .textwidget p {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.subfooter ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.subfooter ul li {
+    background: #166887;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.subfooter ul li a {
+    font-size: 14px;
+    display: block;
+    padding: 10px;
+    opacity: 0.9;
+}
+
+.subfooter ul li a:hover {
+    text-decoration: none;
+    opacity: 1;
+    transition: all 0.15s ease-in;
+}
+
+
+/*-------- MEDIA QUERIES -------------*/
+
+@media screen and (min-width: 1200px) {
+	.carousel {
+		overflow: hidden;
+		height: 100vh;
+	}
+}
+
+@media screen and (max-width: 576px) {
+    .col-sm-12 {
+        text-align: center;
+    }
+
+    .subfooter ul {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .media-r {
+        text-align: center;
+    }
+}
+

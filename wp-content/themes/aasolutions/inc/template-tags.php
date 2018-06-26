@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package AASolutions
+ * @package aasolutions
  */
 
 if ( ! function_exists( 'aasolutions_posted_on' ) ) :
@@ -132,7 +132,7 @@ if ( ! function_exists( 'aasolutions_post_thumbnail' ) ) :
 
 		<?php else : ?>
 
-		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
+		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
 			<?php
 			the_post_thumbnail( 'post-thumbnail', array(
 				'alt' => the_title_attribute( array(

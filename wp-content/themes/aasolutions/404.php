@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package AASolutions
+ * @package aasolutions
  */
 
 get_header();

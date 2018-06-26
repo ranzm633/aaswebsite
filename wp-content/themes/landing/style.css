@@ -1,7 +1,7 @@
 /*!
 Theme Name: AAS Website Theme CSS
 Theme URI: https://www.activeappssolutions.co
-Author: Ares L. Cabahug
+Author: Ares & Conrado
 Author URI: https://www.activeappssolutions.co
 Description: AAS Website using underscores
 Version: 1.0.0
@@ -39,6 +39,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
 
 
 /*--------------------------------------------------------------
@@ -544,12 +545,23 @@ a:hover, a:focus, a:active {
 	color: midnightblue;
 }
 
-a:focus {
-	outline: thin dotted;
-}
-
 a:hover, a:active {
 	outline: 0;
+}
+
+.top-navbar a {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+}
+
+.dropdown-menu {
+    background: rgba(10,10,10,0.4) !important;
+}
+
+a.dropdown-item:hover {
+    color: #00adef;
+    background: transparent !important;
 }
 
 /*--------------------------------------------------------------
@@ -690,6 +702,34 @@ a:hover, a:active {
 
 	.footer{}
 	.footer p.copyright{text-align: center; margin: 0 auto;}
+
+
+	/*---- Additional Header CSS ---------*/
+#navbarNav ul {
+    display: block;
+    list-style: none;
+    padding-left: 0;
+    width: 100%;
+}
+
+#navbarNav ul li {
+    display: inline-block;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light {
+    position: relative;
+    background: rgba(0, 0, 0, 0.2) !important;
+    z-index: 999;
+}
+
+header {
+    margin: -126px;
+}
+
+.navbar-brand .custom-logo-link img {
+    max-height: 100px;
+    width: 100%;
+}
 
 /*--------------------------------------------------------------
 # Misc
